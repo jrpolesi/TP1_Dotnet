@@ -4,7 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        var temperatureSensor = new TemperatureSensor(OnTemperatureExceeded);
+        var temperatureSensor = new TemperatureSensor();
+        temperatureSensor.TemperatureExceeded += OnTemperatureExceeded;
 
         while (true)
         {

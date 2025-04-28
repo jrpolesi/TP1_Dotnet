@@ -1,8 +1,8 @@
 namespace exercicio4;
 
-public class TemperatureSensor(Action<double> onTemperatureExceeded)
+public class TemperatureSensor()
 {
-    public event Action<double> TemperatureExceeded = onTemperatureExceeded;
+    public event Action<double>? TemperatureExceeded;
 
     public void Read(double temperature)
     {
