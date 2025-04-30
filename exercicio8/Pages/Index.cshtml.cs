@@ -12,7 +12,7 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
-    public List<Product> Products { get; set; } = [];
+    public List<Product> Products = [];
 
     public void OnGet()
     {
@@ -26,7 +26,7 @@ public class IndexModel : PageModel
 
     public class Product
     {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        public string Name = "";
+        public decimal Price;
     }
 }
