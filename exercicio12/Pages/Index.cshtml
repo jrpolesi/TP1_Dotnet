@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Criar Evento</h1>
+
+<form method="post" class="border p-4 rounded bg-light bg-opacity-50">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Título</label>
+        <input asp-for="Title" class="form-control"/>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Date" class="form-label">Data</label>
+        <input asp-for="Date" type="datetime-local" class="form-control"/>
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label">Local</label>
+        <input asp-for="Location" class="form-control"/>
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Cadastrar Evento</button>
+</form>
